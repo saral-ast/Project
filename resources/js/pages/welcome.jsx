@@ -1,10 +1,10 @@
-import { Head, Link, usePage } from '@inertiajs/react';
+import { usePage } from '@inertiajs/react';
 // import { Layout } from '@/layouts/app-layout.jsx';
 import Layout from '../layouts/Layout.jsx';
 
 export default function Welcome() {
-    const { auth,orders,hasNextPage,nextCursor,shopDomain } = usePage().props;
-    
+    const { auth, orders, hasNextPage, nextCursor, shopDomain } = usePage().props;
+
     return (
         <>
             <div className="min-h-screen bg-gray-50 p-8">

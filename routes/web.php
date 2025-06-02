@@ -31,11 +31,11 @@ Route::get('/settings',[DashboardController::class,'settings'])
 // })->middleware(['verify.shopify'])->name('settings');
 
 
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('dashboard', function () {
-        return Inertia::render('dashboard');
-    })->name('dashboard');
-});
+// Route::middleware(['auth', 'verified'])->group(function () {
+//     Route::get('dashboard', function () {
+//         return Inertia::render('dashboard');
+//     })->name('dashboard');
+// });
 
-require __DIR__.'/settings.php';
-require __DIR__.'/auth.php';
+// require __DIR__.'/settings.php';
+// require __DIR__.'/auth.php';

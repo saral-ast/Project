@@ -85,7 +85,7 @@ class DashboardController extends Controller
         // Pass to view
 
         // dd($orders);
-        
+        // dd($shopDomain);
         return Inertia::render('welcome', [
             'orders' => $orders,
             'hasNextPage' => $pageInfo['hasNextPage'],
@@ -98,17 +98,19 @@ class DashboardController extends Controller
     public function settings()
     {
         // Get the authenticated user
-        // $user = Auth::user();
+        $user = Auth::user();
         // dd($user);
+        $shopDomain = Auth::user()->name ?? session('shopDomain');
         
         // If user is not authenticated, redirect to login
         // if (!$user) {
-        //     return redirect()->route('login');
+            // return redirect()->route('login');
         // }
         
         // Render the settings page with user data
         return Inertia::render('setting', [
-            'data' => 'Settings Page',
+            'user' => $user,
+            'shopDomain' => $shopDomain,
         ]);
     }
 }

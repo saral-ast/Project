@@ -20,13 +20,6 @@
             })();
         </script>
 
-        <script>
-            window.shopifyConfig = {
-                apiKey: "{{ \Osiset\ShopifyApp\Util::getShopifyConfig('api_key', $shopDomain ?? Auth::user()->name ?? '') }}",
-                host: "{{ request()->get('host') ?? '' }}",
-                shop: "{{ $shopDomain ?? Auth::user()->name ?? '' }}"
-            };
-        </script>
 
         {{-- Inline style to set the HTML background color based on our theme in app.css --}}
         <style>

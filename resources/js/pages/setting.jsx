@@ -3,13 +3,13 @@ import { Head, Link, usePage } from '@inertiajs/react';
 import Layout from '../layouts/Layout.jsx';
 
 export default function Settings() {
-    const { auth,data } = usePage().props;
-    console.log('Settings Page Props:', { auth, data });
+    const { auth,user,shopDomain } = usePage().props;
+    console.log('Settings Page Props:', { auth, user, shopDomain });
 
     return (
         <>
             <h1>Welcome to your Shopify app</h1>
-            <h2>Setting Page</h2>
+            <h2>Setting Page : {shopDomain}</h2>
 
         </>
     );
