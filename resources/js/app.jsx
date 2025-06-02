@@ -11,8 +11,15 @@ import { useAppBridge } from '@shopify/app-bridge-react';
 
 
 
+
+
+
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 const appBridge = useAppBridge();
+
+
+
+
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
@@ -21,14 +28,7 @@ createInertiaApp({
         const root = createRoot(el);
 
         root.render(
-            // <AppBridgeProvider>
-            // ✅ KEEP ONLY THIS:
-            <App {...props} />,
-
-            // </AppBridgeProvider>,
-
-            // </AppBridgeProvider>
-        );
+            <App {...props}  />        );
     },
     progress: {
         color: '#4B5563',

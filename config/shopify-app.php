@@ -574,7 +574,7 @@ return [
     |
     */
 
-    'session_token_refresh_interval' => env('SESSION_TOKEN_REFRESH_INTERVAL', 2000),
+    'session_token_refresh_interval' => env('SESSION_TOKEN_REFRESH_INTERVAL', 24 * 60), // 24 hours in minutes
 
     /*
     |--------------------------------------------------------------------------

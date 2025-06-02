@@ -38,6 +38,8 @@
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
         {{-- <meta name="shopify-api-key" content={{ env('SHOPIFY_API_KEY') }} /> --}}
 
+        
+
         @routes
         @viteReactRefresh
         @vite(['resources/js/app.jsx', "resources/js/pages/{$page['component']}.jsx"])
