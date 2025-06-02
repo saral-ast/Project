@@ -82,6 +82,8 @@ class DashboardController extends Controller
         $data = $response->json('data.orders');       
         $orders = $data['edges'];
         $pageInfo = $data['pageInfo'];
+        $session = session()->all();
+      
         // Pass to view
 
         // dd($orders);
@@ -91,6 +93,8 @@ class DashboardController extends Controller
             'hasNextPage' => $pageInfo['hasNextPage'],
             'nextCursor' => $pageInfo['endCursor'],
             'shopDomain' => $shopDomain,
+            'session' => $session,
+            
         ]);
         
     }
@@ -108,9 +112,13 @@ class DashboardController extends Controller
         // }
         
         // Render the settings page with user data
+        $session = session()->all();
+      
         return Inertia::render('setting', [
             'user' => $user,
             'shopDomain' => $shopDomain,
+            'session' => $session,
+    
         ]);
     }
 }

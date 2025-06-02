@@ -3,7 +3,8 @@ import { usePage } from '@inertiajs/react';
 import Layout from '../layouts/Layout.jsx';
 
 export default function Welcome() {
-    const { auth, orders, hasNextPage, nextCursor, shopDomain } = usePage().props;
+    const { auth, orders, hasNextPage, nextCursor, shopDomain,session } = usePage().props;
+    console.log(session)
 
     return (
         <>

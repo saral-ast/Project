@@ -2,9 +2,10 @@ import { Head, Link, usePage } from '@inertiajs/react';
 // import { Layout } from '@/layouts/app-layout.jsx';
 import Layout from '../layouts/Layout.jsx';
 
+
 export default function Settings() {
-    const { auth,user,shopDomain } = usePage().props;
-    console.log('Settings Page Props:', { auth, user, shopDomain });
+    const { auth,user,shopDomain,session } = usePage().props;
+    console.log('Settings Page Props:', { session });
 
     return (
         <>
